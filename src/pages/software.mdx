@@ -1,0 +1,2397 @@
+import { GuidesOther } from '@/components/GuidesOther'
+
+export const sections = [
+  { title: 'Vision Documentation', id: 'vision_doc' },
+  { title: 'Quick Start', id: 'quick_start' },
+  { title: 'Specifications', id: 'specifications' },
+  { title: 'Technical Perspective', id: 'tech_perspective' },
+  { title: 'User Stories', id: 'user_stories' },
+]
+
+# Software {{className: 'border-b border-zinc-900/5 dark:border-white/5 xl:max-w-none pb-5 mb-7'}}
+
+<GuidesOther
+  id="vision_doc"
+  title="Vision Documentation"
+  level={2}
+  isShow={false}
+/>
+
+Nexis Network project includes two main components
+
+- A web-based application that will provide a platform for decentralized cross-chain conversion of digital assets.
+
+- A blockchain network based on Proof-of-Stake consensus mechanism that will provide an ecosystem for creating customized blockchains, deploying smart contracts, with low fees and high throughput.
+
+Nexis Network project will be aimed to including full support of Ethereum based dApps.
+
+All critical components of the system will be reused as much as possible from existing open source projects to reduce time-to-market and costs of implementation.
+
+## Ecosystem Needs & Requirements
+
+Cryptocurrencies have an isolated existence. Designed to be decentralized and work independently, they either have their own separate blockchain ecosystem or run off of other larger ones such as Ethereum and Binance Smart Chain.
+
+This essentially means that one token cannot interact with another if they run on different ecosystems. As more and more tokens are launched coupled with increased interest due to DeFi, the struggle is getting more serious.
+
+Nexis Network project is committed to promote adoption of cryptocurrencies by providing products that are useful and easy to use.
+
+First of all, the cross-chain swap solution should solve the problem of converting tokens between different blockchains which can now be complicated for the general user.
+
+There is another problem that is relevant for small and medium businesses who want to implement blockchain and dApps into their operations. Using existing solutions puts limitations on business applicability and is often accompanied with high transactional costs. Custom development of a decentralized application or the blockchain network can be costly and time consuming. By implementing the innovative blockchain architecture Nexis Network native blockchain network should allow cheap, simple and fast creation of custom blockchains with low-cost transactions for businesses that need it.
+
+Businesses that already run their applications on Ethereum struggle with high fees and low TPS rate. They need a cheaper and faster alternative to optimize their operations. Nexis Network blockchain should provide full support for Ethereum based smart contracts written in Solidity for the smooth and efficient transition from Ethereum to Nexis Network blockchain.
+
+## Solution Overview
+
+Nexis Network will be the platform that provides a wide range of blockchain and DeFi opportunities for users from swapping tokens between different blockchains and earn profits from staking to creating fully-functional dApps written in Solidity and fully compatible with Ethereum Virtual Machine (EVM).
+
+Initially Nexis Network ecosystem will be a fork of Fantom Network (https://fantom.foundation/). This will give faster time to market, robust technology and feature-rich solutions.
+
+Main components of the platform will include:
+
+- Cross-chain swap application
+- Main blockchain network supporting Solidity dApps
+- Governance token
+- Staking module
+- Blockchain explorer
+- Wallet
+
+In later versions, it is planned to introduce enterprise solutions for managing, tracking, and securing private data such as healthcare data/patient data, data for private sector industries, government, etc.
+
+## Major Features
+
+### Cross-chain swap app
+
+Web application integrated with open source liquidity provider API's that allows to swap tokens between networks supported by these providers from the custom Nexis Network web interface.
+
+### PoS blockchain network
+
+The solution forked from Fantom blockchain network that will allow for staking and natively building swap bridges between multiple blockchains. The network will be governed by the native Nexis Network token providing the ecosystem for creating swap liquidity pools.
+
+### Wallet Application
+
+Mobile client for storing all supported tokens and accessing DeFi features provided by the network including swaps and staking.
+
+### EVM compatible Solidity dApps
+
+Full support of Ethereum based smart contracts written in Solidity to allow for dApp development and transition of users from Ethereum to Nexis Network blockchain.
+
+### Blockchain Explorer
+
+Web application integrated with the native network that allows to track and search transactions on the ledger.
+
+## Scope & Limitations
+
+The initial version of Nexis Network project will focus on creating the fastest possible value for end users by providing Nexis Network token swap application integrated with open source liquidity providers via their API's.
+
+In parallel the efforts will be directed to the development of the core functionality of the platform that covers the MVP features and forms the basis for further development. The MVP release will include a forked and Nexis Network branded set of applications from Fantom blockchain ecosystem.
+
+For the budget optimization the software will not have features for the general consumer, such as:
+
+- Ability to swap tokens that are not supported by open source liquidity providers (initial version).
+- Ability to swap tokens between networks that are not supported by Fantom blockchain at the time of the fork.
+- Custom features that are not supported by Fantom blockchain at the time of the fork.
+
+## Other Needs
+
+The solution will initially run on AWS cloud infrastructure utilizing message-based architecture and modern technologies like Docker, RabbitMQ, Redis, Lerna, etc.
+
+## Accessibility
+
+Nexis Network platform will be designed to be as widely accessible as possible. Therefore, it should be compatible with the latest versions of Google Chrome, Firefox, Safari, Edge, Brave, and Internet Explorer browsers.
+
+<GuidesOther id="quick_start" title="Quick Start" level={2} isShow={false} />
+
+<Note>
+  Good to know: A quick start guide can be good to help folks get up and running
+  with your API in a few steps. Some people prefer diving in with the basics
+  rather than meticulously reading every page of documentation!
+</Note>
+
+## Get your API keys
+
+Your API requests are authenticated using API keys. Any request that doesn't include an API key will return an error.
+
+You can generate an API key from your Dashboard at any time.
+
+## Install the library
+
+The best way to interact with our API is to use one of our official libraries:
+
+<CodeGroup>
+
+```bash {{ language: 'js' }}
+# Install via NPM
+npm install --save my-api
+```
+
+```bash {{ language: 'python' }}
+# Install via pip
+pip install --upgrade myapi
+```
+
+</CodeGroup>
+
+<Note>
+  Good to know: Using tabs to separate out different languages is a great way to
+  present technical examples or code documentation without cramming your docs
+  with extra sections or pages per language.
+</Note>
+
+## Make your first request
+
+To make your first request, send an authenticated request to the pets endpoint. This will create a `pet`, which is nice.
+
+<Note>
+  Good to know: You can use the API Method block to fully document an API
+  method. You can also sync your API blocks with an OpenAPI file or URL to
+  auto-populate them.
+</Note>
+
+Take a look at how you might call this method using our official libraries, or via `curl`:
+
+## Create pet {{ tag: 'POST', label: 'https://api.myapi.com/v1/pet' }}
+
+<Row>
+  <Col>
+    Creates a new pet.
+
+    ### Required attributes
+
+    <Properties>
+      <Property name="name" type="string">
+        The name of the pet
+      </Property>
+    </Properties>
+
+    ### Optional attributes
+
+    <Properties>
+      <Property name="owner_id" type="string">
+        The `id` of the user who owns the pet
+      </Property>
+      <Property name="species" type="string">
+        The species of the pet
+      </Property>
+      <Property name="breed" type="string">
+        The breed of the pet
+      </Property>
+    </Properties>
+
+  </Col>
+  <Col sticky>
+    <CodeGroup title="Request" tag="POST" label="https://api.myapi.com/v1/pet">
+
+    ```bash {{ title: 'cURL' }}
+    curl https://api.myapi.com/v1/pet
+    -u YOUR_API_KEY:
+    -d name='Wilson'
+    -d species='dog'
+    -d owner_id='sha7891bikojbkreuy'
+    ```
+
+    ```js
+    // require the myapi module and set it up with your API key
+    const myapi = require('myapi')(YOUR_API_KEY);
+
+    const newPet = away myapi.pet.create({
+        name: 'Wilson',
+        owner_id: 'sha7891bikojbkreuy',
+        species: 'Dog',
+        breed: 'Golden Retriever',
+    })
+    ```
+
+    ```python
+    // Set your API key before making the request
+    myapi.api_key = YOUR_API_KEY
+
+    myapi.Pet.create(
+        name='Wilson',
+        owner_id='sha7891bikojbkreuy',
+        species='Dog',
+        breed='Golden Retriever',
+    )
+    ```
+
+    </CodeGroup>
+
+    ```json {{ title: 'Response' }}
+    {
+        "name"="Wilson",
+        "owner": {
+            "id": "sha7891bikojbkreuy",
+            "name": "Samuel Passet",
+        "species": "Dog",}
+        "breed": "Golden Retriever",
+    }
+    ```
+
+  </Col>
+</Row>
+
+<GuidesOther
+  id="specifications"
+  title="Specifications"
+  level={2}
+  isShow={false}
+/>
+
+## 1.1 NexisSwap: Main page
+
+### 1.1.1 Summary
+
+As a Guest I want to view the main page so that I could navigate through the features of NexisSwap app.
+
+### 1.1.2. Acceptance criteria
+
+### 1.1.2.1. A user should be able to navigate to NexisSwap application from the NexisCoin (Nexis Network) website.
+
+### 1.1.2.2. The main page of NexisSwap application should include the following elements in the header:
+
+- Nexis Network logo
+- Bridges links dropdown menu
+- Network selector dropdown menu
+- Buy crypto button
+- Connect Wallet button
+- Language selector button
+
+### 1.1.2.3. The swap widget should include:
+
+- Refresh button
+- Settings button
+- Source token selector
+- Amount input field
+- Target token selector
+- Swap protocol selector
+- Action buttons
+- Swap rate and route indicator
+
+### 1.1.3. UI Design
+
+## 1.2. NexisSwap: Connect a wallet
+
+### 1.2.1. Summary
+
+As a User I want to connect a wallet so that I could swap tokens on my existing crypto wallet.
+
+### 1.2.2. Acceptance criteria
+
+### 1.2.2.1. Once a user clicks “Connect wallet” button the Connect wallet widget is displayed.
+
+### 1.2.2.2. A user should be able to:
+
+- Open Terms of service and Privacy policy pages
+- Check the “I read and accept” confirmation checkbox
+- Choose a network
+- Select a wallet: Metamask or WalletConnect
+
+### 1.2.2.3. Once a user selects a wallet the corresponding web3 app widget is displayed.
+
+### 1.2.2.4. A user selects an account and confirms the connection
+
+### 1.2.2.5. Once the connection is successful the account alias and wallet balance is displayed in the header.
+
+### 1.2.3. UI Design
+
+## 1.3. NexisSwap: Buy cryptocurrency with a credit card
+
+### 1.3.1. Summary
+
+As a User I want to buy cryptocurrency with a credit card so that I could convert fiat to crypto.
+
+### 1.3.2. Acceptance criteria
+
+### 1.3.2.1. Upon clicking on the Buy Crypto button a user should be redirected to MoonPay payment gateway (https://buy.moonpay.io/).
+
+### 1.3.2.2. The payment gateway allows a user to select a cryptocurrency from a list, fill in the target wallet address and buy the selected cryptocurrency with a credit card.
+
+### 1.3.3. UI Design
+
+## 1.4. NexisSwap: Transfer coins via bridges
+
+### 1.4.1. Summary
+
+As a User I want to transfer coins via bridges so that I could move tokens from one blockchain to another.
+
+### 1.4.2. Acceptance criteria
+
+### 1.4.2.1. A user should be able to move supported tokens between blockchains using bridges.
+
+### 1.4.2.2. Upon clicking on an item in the Bridges dropdown menu a webpage of the corresponding bridge is open in a new browser tab.
+
+### 1.4.2.3. The list of bridges:
+
+- https://www.binance.org/en/bridge
+- https://wallet.matic.network/bridge/
+- https://gateway.optimism.io/
+- https://bridge.arbitrum.io/
+
+### 1.4.3. UI Design
+
+## 1.5. NexisSwap: Select the chain for swap
+
+### 1.5.1. Summary
+
+As a User I want to select the chain for swap so that I could choose the blockchain where I will perform the swap.
+
+### 1.5.2. Acceptance criteria
+
+### 1.5.2.1. A user should be able to select a network where they want to swap tokens.
+
+### 1.5.2.2. The selection of a network affects the list of available tokens and protocols in the Swap parameters widget.
+
+### 1.5.2.3. The system should identify if the connected wallet is configured for the selected network and prompt a user to change wallet settings if the wallet network is different.
+
+### 1.5.3. UI Design
+
+## 1.6. NexisSwap: Set the swap parameters
+
+### 1.6.1. Summary
+
+As a User I want to set the swap parameters so that I could define the direction and the amount of the swap
+
+### 1.6.2. Acceptance criteria
+
+### 1.6.2.1. A user should be able to select the source token from the dropdown list and the amount to swap.
+
+### 1.6.2.2. The system should validate if the amount of selected token on the connected wallet of a user is sufficient.
+
+### 1.6.2.3. The system should display the approximate value of defined amount of selected tokens calculated in USD.
+
+### 1.6.2.4. A user should be able to select the target token from the dropdown list.
+
+### 1.6.2.5. A user should be able to view and select available swap protocols to be used for the swap.
+
+### 1.6.2.6. Each swap protocol item should include the name of the protocol, amount to be received, the cost of transaction and total amount of the swap operation.
+
+### 1.6.3. UI Design
+
+## 1.7. NexisSwap: View the details of the deal (rate, fees, route)
+
+### 1.7.1. Summary
+
+As a User I want to view the details of the deal (rate, fees, route) so that I could understand the full cost of the swap
+
+### 1.7.2. Acceptance criteria
+
+### 1.7.2.1. Once swap parameters are set a user should be able to view the conversion rate and the conversion route.
+
+### 1.7.3. UI Design
+
+## 1.8. NexisSwap: Set additional parameters (gas limit, slippage)
+
+### 1.8.1. Summary
+
+As a User I want to set additional parameters (gas limit, slippage) so that I could optimize transaction cost and rate
+
+### 1.8.2. Acceptance criteria
+
+### 1.8.2.1. Upon clicking the Swap settings button the advanced swap parameters widget is open
+
+### 1.8.2.2. A user should be able to set the Gas limit price for the transaction:
+
+- One of predefined values (Low, Medium or High)
+- Custom value
+
+### 1.8.2.3. A user should be able to set the Slippage tolerance value for the transaction:
+
+- One of predefined values
+- Custom value
+
+### 1.8.2.4. Transaction is not executed if it is not possible to complete the transaction within gas price and slippage tolerance limits defined by a user.
+
+### 1.8.3. UI Design
+
+## 1.9. NexisSwap: Confirm the deal
+
+### 1.9.1. Summary
+
+As a User I want to confirm the deal so that I could initiate the swap transaction
+
+### 1.9.2. Acceptance criteria
+
+### 1.9.2.1. After setting all the parameters of the swap a user should be able to initiate the swap execution by clicking on the Swap Currency button.
+
+### 1.9.2.2. Upon clicking on the Swap Currency button the linked wallet application should be triggered and open for the transaction confirmation.
+
+### 1.9.2.3. If the wallet is not connected to the application, clicking on the Swap Currency button (or if a user clicks Connect Wallet button) should open the Connect Wallet widget.
+
+### 1.9.3. UI Design
+
+## 1.10. Nexis Wallet: Home page
+
+### 1.10.1. Summary
+
+As a Guest I want to view the home page so that I could navigate through the features of the Nexis Wallet app
+
+### 1.10.2. Acceptance criteria
+
+### 1.10.2.1. A user should be able to open the Nexis Wallet application from the website of Nexis Network.
+
+### 1.10.2.2. Nexis Wallet app should include the sidebar menu and main content area.
+
+### 1.10.2.3. Sidebar menu should include the following clickable elements:
+
+- Nexis logo - redirecting to the main page of Nexis
+- Home - redirecting to the home page of Nexis Wallet app
+- Wallet - redirecting to the Wallet page
+- Staking - redirecting to the Staking page
+- Governance - redirecting to the Governance page
+- Swap - redirecting to NexisSwap application
+
+### 1.10.2.4. The main content area should include:
+
+- Action buttons (Connect wallet, Create wallet, Restore wallet)
+- General statistics of all wallets within the account (Total balance, Available balance)
+- The list of wallets associated with the account
+- Details of each wallet (Name, Address, Type, Total balance, Available balance)
+
+### 1.10.3. UI Design
+
+## 1.11. Nexis Wallet: Connect Metamask
+
+### 1.11.1. Summary
+
+As a User I want to connect metamask so that I could use funds from my Metamask wallet inside the Nexis Wallet app
+
+### 1.11.2. Acceptance criteria
+
+### 1.11.2.1. A user should be able to connect their Metamask wallet to the Nexis Wallet application.
+
+### 1.11.2.2. Once connected, the user's Metamask wallet is displayed in the list of wallets inside the Nexis Wallet application.
+
+## 1.12. Nexis Wallet: Create a new wallet
+
+### 1.12.1. Summary
+
+As a User I want to create a new wallet so that I could generate a new key pair for transactions
+
+### 1.12.2. Acceptance criteria
+
+### 1.12.2.1. A user should be able to create a wallet by clicking on the Create wallet button at the home page of Nexis Wallet application.
+
+### 1.12.2.2. The flow of creating a wallet consists of four steps:
+
+- Step 1 - a user creates a password for the wallet and downloads keystore file to their local machine
+- Step 2 - a seed phrase is displayed. At this step a user should also be available to view the wallet’s private key
+- Step 3 - a seed phrase confirmation check. At this step a user should confirm the seed phrase displayed at Step 2 by clicking the words in the correct order.
+- Step 4 - the confirmation message is displayed. Upon clicking the Access wallet button a user should be redirected to the Wallet page of the newly created wallet.
+
+### 1.12.3. UI Design
+
+## 1.13. Nexis Wallet: Restore wallet
+
+### 1.13.1. Summary
+
+As a User I want to restore wallet so that I could recover my funds
+
+### 1.13.2. Acceptance criteria
+
+### 1.13.2.1. Upon clicking on the Restore wallet button from the home page of Nexis Wallet application the Restore wallet widget is displayed.
+
+### 1.13.2.2. The Restore wallet widget should provide three options for wallet recovery:
+
+- Uploading keystore file and providing a password to it
+- Entering the mnemonic phrase
+- Entering the private key of the wallet
+
+### 1.13.2.3. Once wallet recovery is successful, a user should be redirected to the Wallet page of the recovered wallet
+
+### 1.13.3. UI Design
+
+## 1.14. Nexis Wallet: Edit wallet settings
+
+### 1.14.1. Summary
+
+As a User I want to edit wallet settings so that I could personalize my wallets in Nexis Wallet app
+
+### 1.14.2. Acceptance criteria
+
+### 1.14.2.1. A user should be able to access wallet settings from the wallet item in the list of wallets at the home page of Nexis Wallet application or from a wallet page by clicking the Edit button (pencil icon).
+
+### 1.14.2.2. Once the Edit button is clicked, the Wallet Settings widget is displayed.
+
+### 1.14.2.3. In the Wallet Settings widget a user should be able to:
+
+- View wallet address
+- Copy wallet address
+- Show QR code with wallet address
+- View wallet type
+- View and edit wallet display name
+- View and edit the order of wallet display in the list of wallets
+- Remove wallet
+- Save changes
+
+### 1.14.3. UI Design
+
+## 1.15. Nexis Wallet: Copy wallet address
+
+### 1.15.1. Summary
+
+As a User I want to copy wallet address so that I could add my wallet address to a clipboard with a single click
+
+### 1.15.2. Acceptance criteria
+
+### 1.15.2.1. A user should be able to copy wallet address to the clipboard by clicking the Copy button from the wallet item in the list of wallets at the home page of Nexis Wallet application, or from Wallet Settings widget, or from a wallet page.
+
+### 1.15.3. UI Design
+
+## 1.16. Nexis Wallet: Show QR code with wallet address
+
+### 1.16.1. Summary
+
+As a User I want to show qr code with wallet address so that I could share my wallet address for scanning with a camera
+
+### 1.16.2. Acceptance criteria
+
+### 1.16.2.1. A user should be able to display a wallet address with QR-code for scanning by clicking the QR-code button from the Wallet Settings widget, or from a wallet page.
+
+### 1.16.3. UI Design
+
+## 1.17. Nexis Wallet: Remove wallet
+
+### 1.17.1. Summary
+
+As a User I want to delete wallet so that I could remove a wallet from my Nexis Wallet app
+
+### 1.17.2. Acceptance criteria
+
+### 1.17.2.1. A user should be able to remove a wallet from the list of wallets by clicking the Remove wallet button from the Wallet Settings widget.
+
+### 1.17.2.2. Once the Remove wallet button is clicked, the confirmation widget is displayed.
+
+### 1.17.2.3. Upon clicking the Remove button at the confirmation widget, the wallet is removed from the list of wallets.
+
+### 1.17.2.4. A user should be able to access the removed wallet by completing the Restore wallet operation.
+
+### 1.17.3. UI Design
+
+## 1.18. Nexis Wallet: View the history of transactions
+
+### 1.18.1. Summary
+
+As a User I want to view the history of transactions so that I could see all the incoming and outgoing transactions of my wallet
+
+### 1.18.2. Acceptance criteria
+
+### 1.18.2.1. A user should be able to view the list of transactions for the wallet at the wallet page including:
+
+- Transaction address
+- Timestamp
+- Address of the counterparty
+- Received/sent amount
+
+### 1.18.3. UI Design
+
+## 1.19. Nexis Wallet: View the list of assets
+
+### 1.19.1. Summary
+
+As a User I want to view the list of assets so that I could see all tokens in my wallet
+
+### 1.19.2. Acceptance criteria
+
+### 1.19.2.1. A user should be able to view the list of assets on their wallet including:
+
+- The name of an asset
+- Available amount
+- Deposited amount
+- Borrowed amount
+
+### 1.19.3. UI Design
+
+## 1.20. Nexis Wallet: Send assets
+
+### 1.20.1. Summary
+
+As a User I want to send assets so that I could transfer tokens to another wallet address
+
+### 1.20.2. Acceptance criteria
+
+### 1.20.2.1. A user should be able to send funds from their wallet to another wallet address.
+
+### 1.20.2.2. Once a user clicks on the Send button from the wallet page, the Send assets widget is displayed.
+
+### 1.20.2.3. The flow of sending assets from Nexis Wallet application consists of three steps:
+
+- Step 1 - select the destination network (Nexis, Ethereum or Binance)
+- Step 2 - Enter the amount to be sent, enter recipient’s wallet address and memo. A user should not be able to enter the amount exceeding the total wallet holdings.
+- Review and confirm the details of the transaction
+
+### 1.20.2.4. Once the transaction is confirmed it should be sent to a validator node for processing.
+
+### 1.20.2.5. Once the transaction is accepted by a validator it appears on the list of transactions at the wallet page.
+
+### 1.20.3. UI Design
+
+## 1.21. Nexis Wallet: Receive assets
+
+### 1.21.1. Summary
+
+As a User I want to receive assets so that I could get tokens to my wallet address
+
+### 1.21.2. Acceptance criteria
+
+### 1.21.3. UI Design
+
+## 1.22. Nexis Wallet: Stake NexisCoin and get a reward
+
+### 1.22.1. Summary
+
+As a User I want to stake NexisCoin so that I could get rewards for securing the network
+
+### 1.22.2. Acceptance criteria
+
+### 1.22.2.1. A user should be able to stake NexisCoin for the reward.
+
+### 1.22.2.2. There should be two options for staking:
+
+- Running a validator node
+- Delegation
+
+### 1.22.2.3. Delegation staking page is open upon clicking Staking in the sidebar menu.
+
+### 1.22.2.4. A user should be able to view active delegations per selected wallet and for all wallets on separate tabs.
+
+### 1.22.2.5. Each delegation includes the details: Delegation time, Validator name, Delegated amount.
+
+### 1.22.2.6. Upon click on Add delegation button the delegation widget is displayed.
+
+### 1.22.2.7. The delegation flow includes two steps:
+
+- Step 1 - enter delegation amount and select a validator from the list
+- Step 2 - review details and confirm delegation
+
+### 1.22.2.8. Once confirmed, the delegation is displayed on the list of delegations.
+
+### 1.22.2.9. The reward is paid to the user's account proportionally to the amount delegated to the given validator for each block mined by this validator.
+
+### 1.22.3. UI Design
+
+## 1.23. Nexis Wallet: Vote on governance proposals
+
+### 1.23.1. Summary
+
+As a User I want to vote on governance proposals so that I could express my opinion on network changes
+
+### 1.23.2. Acceptance criteria
+
+### 1.23.2.1. A user should be able to vote for the proposals suggested by validators from the Governance page that should be accessible under by clicking the Governance button in the sidebar menu.
+
+### 1.23.2.2. The Governance page should include the list of proposals with the following fields:
+
+- ID/Name of a proposals
+- Start/End dates of voting
+- User’s votes
+- Votes rate
+- Winner proposal
+- Proposal status
+- Details button
+
+### 1.23.2.3. By clicking Details button a user should be able to access the page with details of the selected proposal that include:
+
+- Proposal’s name, description and address
+- Current voting stats
+- Voting controls
+
+### 1.23.2.4. To vote on proposals a user should delegate their stake to a validator.
+
+### 1.23.3. UI Design
+
+## 1.24. Nexis Network: Run a validator node
+
+### 1.24.1. Summary
+
+As a Validator I want to run a validator node so that I could get rewards for validating transactions
+
+### 1.24.2. Acceptance criteria
+
+### 1.24.2.1. To earn additional fees for validating transactions on chain a user should run a full validator node.
+
+### 1.24.2.2. Validator’s account should meet requirements of NexisCoin amount on the wallet.
+
+### 1.24.2.3. The flow to setup a full validator node:
+
+- Launch Cloud instance that meets recommended requirements
+- Install Nexis Network build
+- Create validator wallet
+- Fund validator wallet
+- Register Validator on-chain
+- Create a validator key
+- Run a node
+
+### 1.24.2.4. Detailed description of the installation process can be found by the following [reference](https://docs.fantom.foundation/staking/how-to-run-a-validator-node).
+
+## 1.25. Nexis Network: Run a read-only node
+
+### 1.25.1. Summary
+
+As a User I want to run a read-only node so that I could read on-chain data in real time
+
+### 1.25.2. Acceptance criteria
+
+### 1.25.2.1. To read data from the network without the ability to validate transactions and earn validator fees a user should be able to run a read-only node.
+
+### 1.25.2.2. The flow to setup a read-only node:
+
+- Launch Cloud instance that meets recommended requirements
+- Install Nexis Network build
+
+### 1.25.2.3. Detailed description of the installation process can be found by the following [reference](https://docs.fantom.foundation/staking/run-a-read-only-node).
+
+## 1.26. Nexis Network: Deploy a Solidity smart contract
+
+### 1.26.1. Summary
+
+As a User I want to deploy a solidity smart contract so that I could run ERC-20 or ERC-721 smart contracts on Nexis Network
+
+### 1.26.2. Acceptance criteria
+
+### 1.26.2.1. To deploy a smart contract, a user sends a transaction to the Nexis Network containing smart contract’s bytecode without specifying any recipients.
+
+### 1.26.2.2. After the contract is deployed, it will be available to all users of the Nexis Network.
+
+### 1.26.2.3. Smart contracts should have an Nexis Network address like other accounts.
+
+### 1.26.2.4. Detailed description of the installation process can be found by the following [reference](https://docs.fantom.foundation/tutorials/deploy-a-smart-contract).
+
+## 1.27. Nexis Network: Create a fixed-cap asset
+
+### 1.27.1. Summary
+
+As a User I want to create a fixed-cap asset so that I could issue a token with fixed supply
+
+### 1.27.2. Acceptance criteria
+
+### 1.27.2.1. A user should be able to create a fixed-cap asset on Nexis Network that are fungible tokens for which the supply is determined at the time of asset creation.
+
+### 1.27.2.2. To deploy a smart contract a user should:
+
+- Compile a code of the smart contract into bytecode
+- Deploy a smart contract by sending a transaction to the Nexis Network
+- Navigate to the explorer to check that the token has been created
+
+## Nexis Network: Create a variable-cap asset
+
+### 1.28.1. Summary
+
+As a User I want to create a variable-cap asset so that I could issue a token with variable supply
+
+### 1.28.2. Acceptance criteria
+
+### 1.28.2.1. A user should be able to create a fixed-cap asset on Nexis Network that are fungible tokens for which the supply is determined at the time of asset creation.
+
+### 1.28.2.2. To deploy a smart contract a user should:
+
+- Compile a code of the smart contract into bytecode
+- Deploy a smart contract by sending a transaction to the Nexis Network
+- Navigate to the explorer to check that the token has been created
+
+### 1.28.2.3. A user should be able to use the \_mint function to create additional units of the token.
+
+## 1.29. Nexis Network: Create a local test network
+
+### 1.29.1. Summary
+
+As a User I want to create a local test network so that I could test dApps locally without risk
+
+### 1.29.2. Acceptance criteria
+
+### 1.29.2.1. A user should be able to set up a local instance of Ezxo Network for testing purposes.
+
+### 1.29.2.2. To create a local test network a user should:
+
+- Install Go
+- Install build tools
+- Install go-lachesis
+- Install the Special Fee Contract
+- Create a validator
+- Setup mainnet genesis
+- Add the precompiled contract
+- Configure SFC
+- Create a validator on the SFC
+
+### 1.29.3. Detailed description of the installation process can be found by the following [reference](https://docs.fantom.foundation/tutorials/create-a-local-test-network).
+
+## 1.30. Nexis Scan: Main page
+
+### 1.30.1. Summary
+
+As a Guest I want a main page so that I could navigate through the features of Nexis Scan app
+
+### 1.30.2. Acceptance criteria
+
+### 1.30.2.1. The main page of the Nexis Scan application should include:
+
+- Nexis Scan logo
+- Main menu (available from all pages)
+- Main/Test network switcher
+- Search bar with filters (All, Addresses, Tokens, Tags, Labels, Websites)
+- Current NexisCoin price (in USD, in BTC, daily change percent)
+- NexisCoin market cap (in USD, in NexisCoin)
+- Latest block (height, block time, number of transactions, throughput TPS)
+- The number of active validators
+- Current epoch ID
+- NexisCoin transaction history chart
+- The list of latest blocks (block height, time since the validation, validator’s address, transactions count, block time, total amount of NexisCoin transferred)
+- The list of latest transactions (txid, time since the block validation, from/to addresses, transferred amount)
+
+### 1.30.2.2. A user should be able to add Nexis Network to Metamask from the main page of Nexis Scan web application.
+
+### 1.30.3. UI Design
+
+Refer to: https://ftmscan.com
+
+## 1.31. Nexis Scan: View top accounts by balance
+
+### 1.31.1. Summary
+
+As a Guest I want to view top accounts by balance so that I could check addresses with highest balances
+
+### 1.31.2. Acceptance criteria
+
+### 1.31.2.1. A user should be able to access Top Accounts by NexisCoin balance page from the main menu of Nexis Scan application.
+
+### 1.31.2.2. The page should include:
+
+- Estimated number of accounts with total NexisCoin holdings
+- The list of accounts (rank, address, name tag, balance, percentage of total cap, tnx count)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.31.3. UI Design
+
+Refer to: https://ftmscan.com/accounts
+
+## 1.32. Nexis Scan: View account details
+
+### 1.32.1. Summary
+
+As a Guest I want to view account details so that I could check the info of a specific wallet address
+
+### 1.32.2. Acceptance criteria
+
+### 1.32.2.1. By clicking on account address from any page of Nexis Scan application a user should be able to view the Account Details page.
+
+### 1.32.2.2. The page should include:
+
+- Account address with controls to copy the address to the clipboard and show the address as QR code
+- The total balance of NexisCoin on the account
+- USD value of NexisCoin holdings on the account and current NexisCoin price in USD
+- Other token holdings on the account including the button to view the detailed page of token holdings of the account
+- The list of transactions of the account (total number of transactions from/to the account, txnid, method, block, age, from/to addresses, txn value, txn fee)
+- The list of internal transactions (same structure as above, excluding fee)
+- The list of ERC-20 token transactions (same structure as above, including token name)
+- The list of ERC-721 token transactions (same structure as above, including token id)
+- Analytics charts (including date range selector):
+  - NexisCoin balance chart (Nexis Account balance chart, historic USD value chart, highest/lowest NexisCoin/USD value indicators)
+  - Transactions (NexisCoin transactions, unique outgoing addresses, unique incoming addresses)
+  - Txn fees (used, spent, including totals)
+  - NexisCoin transfers (sent, received)
+  - Token transfers (including token contracts count)
+- Comments (view and comment)
+
+### 1.32.3. UI Design
+
+Refer to: https://ftmscan.com/address/0xebf4fbb9c81b84dd5cf89bc75588e5d0018501b3 {{className: 'break-words'}}
+
+## 1.33. Nexis Scan: View token holdings by account
+
+### 1.33.1. Summary
+
+As a Guest I want to view token holdings by account so that I could check tokens amounts per address
+
+### 1.33.2. Acceptance criteria
+
+### 1.33.2.1. A user should be able to view the page with details on token holdings for a specific account by clicking on the corresponding action button from the Account Details page (if the account has no token holdings, this functionality is not available).
+
+### 1.33.2.2. The page should include:
+
+- Total value of account holdings in Nexiscoin
+- Total value of account holdings in USD
+- The list of tokens available on the account (token logo, token name, token address, Symbol, quantity, token price, daily change, value in NexisCoin, value in USD)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+- Search bar
+
+### 1.33.3. UI Design
+
+Refer to: https://ftmscan.com/tokenholdings?a=0xff7f8a0b3232fe3b68ea361ddca657c4f7896b43 {{className: 'break-words'}}
+
+## 1.34. Nexis Scan: View the list of confirmed transactions
+
+### 1.34.1. Summary
+
+As a Guest I want to view the list of confirmed transactions so that I could check all the transactions added to the blockchain
+
+### 1.34.2. Acceptance criteria
+
+### 1.34.2.1. A user should be able to access the Transactions page from the main menu of Nexis Scan application.
+
+### 1.34.2.2. The page should include:
+
+- The list of transactions (total number of transactions, txnid, method, block, age, from/to addresses, txn value, txn fee)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.34.3. UI Design
+
+Refer to: https://ftmscan.com/txs
+
+## 1.35. Nexis Scan: View the list of pending transactions
+
+### 1.35.1. Summary
+
+As a Guest I want to view the list of pending transactions so that I could check transactions that are are not yet validated
+
+### 1.35.2. Acceptance criteria
+
+### 1.35.2.1. A user should be able to access the Pending Transactions page from the main menu of Nexis Scan application.
+
+### 1.35.2.2. The page should include:
+
+- The list of pending transactions (total number of pending transactions, txnid, nonce, method, last seen, gas limit, gas price, from/to addresses, txn value)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.35.3. UI Design
+
+Refer to: https://ftmscan.com/txsPending
+
+## 1.36. Nexis Scan: View transaction details
+
+### 1.36.1. Summary
+
+As a Guest I want to view transaction details so that I could check the extended information of a specific transaction
+
+### 1.36.2. Acceptance criteria
+
+### 1.36.2.1. By clicking on account address from any page of Nexis Scan application a user should be able to view the Account Details page.
+
+### 1.36.2.2. The page should include:
+
+- Transaction hash
+- Status
+- Block height and number of block confirmations
+- From/To addresses
+- Value (in NexisCoin and USD)
+- Transaction fee (in NexisCoin and USD)
+- Gas limit
+- Gas used (amount and percentage of gas limit)
+- Gas price (in NexisCoin and Gwei)
+- Nonce
+- Input data (including the functionality to decode)
+
+### 1.36.3. UI Design
+
+Refer to: https://ftmscan.com/tx/0xcb27811a2975b19608608107f587c46a085d6dc1a234aa35725e8f6866fb1ea2 {{className: 'break-words'}}
+
+## 1.37. Nexis Scan: View contract internal transactions
+
+### 1.37.1. Summary
+
+As a Guest I want to view contract internal transactions so that I could check transactions related to a specific smart contract
+
+### 1.37.2. Acceptance criteria
+
+### 1.37.2.1. A user should be able to access the Contract Internal Transactions page from the main menu of Nexis Scan application.
+
+### 1.37.2.2. The page should include:
+
+- The list of contract internal transactions (total number of internal transactions, block height, age, parent txnid, type, from/to addresses, txn value)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.37.3. UI Design
+
+Refer to: https://ftmscan.com/txsInternal
+
+## 1.38. Nexis Scan: View blocks
+
+### 1.38.1. Summary
+
+As a Guest I want to view blocks so that I could check blocks details
+
+### 1.38.2. Acceptance criteria
+
+### 1.38.2.1. A user should be able to access the Blocks page from the main menu of Nexis Scan application.
+
+### 1.38.2.2. The page should include:
+
+- The list of blocks (total number of blocks, block height, age, number of transactions in the block, gas used, block reward)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.38.3. UI Design
+
+Refer to: https://ftmscan.com/blocks
+
+## 1.39. Nexis Scan: View block details
+
+### 1.39.1. Summary
+
+As a Guest I want to view block details so that I could check the extended information of a specific block
+
+### 1.39.2. Acceptance criteria
+
+### 1.39.2.1. By clicking on block height (block ID) from any page of Nexis Scan application a user should be able to view the Block page.
+
+### 1.39.2.2. The page should include:
+
+- Block height (block ID)
+- Timestamp
+- Number of transactions (including internal)
+- Block reward
+- Difficulty
+- Total difficulty
+- Size
+- Gas used
+- Extra data
+- Hash
+- Parent hash
+- Sha3Uncles
+- Nonce
+- Comments (view and comment)
+
+### 1.39.3. UI Design
+
+Refer to: https://ftmscan.com/block/18241801
+
+## 1.40. Nexis Scan: View verified contracts
+
+### 1.40.1. Summary
+
+As a Guest I want to view verified contracts so that I could check smart contracts that have been verified by Nexis Scan app
+
+### 1.40.2. Acceptance criteria
+
+### 1.40.2.1. A user should be able to access the Contracts page from the main menu of Nexis Scan application.
+
+### 1.40.2.2. The page should include:
+
+- Quick filter dropdown (latest, open source, Solidity compiler, Vyper compiler, contract security audit)
+- The list of verified contracts (total number of contracts, contract address, contract name, compiler, compiler version, balance on the contract, number of transactions, contract settings marks, verification date, audit mark, license type)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.40.3. UI Design
+
+Refer to: https://ftmscan.com/contractsVerified
+
+## 1.41. Nexis Scan: View contract details
+
+### 1.41.1. Summary
+
+As a Guest I want to view contract details so that I could check the extended information of a specific smart contract
+
+### 1.41.2. Acceptance criteria
+
+### 1.41.2.1. By clicking on a contract address from any page of Nexis Scan application a user should be able to view the Contract page.
+
+### 1.41.2.2. The page should include all the elements as Account page plus:
+
+- Contract code tab including:
+  - Verification mark
+  - Contract name
+  - Compiler Version
+  - Optimization Enabled
+  - Other Settings
+  - Contract Source Code blockUI Design
+  - Contract Security Audit
+  - Contract ABI
+  - Contract Creation Code
+  - Constructor Arguments
+  - Deployed ByteCode Sourcemap
+  - Swarm Source
+- Read contract tab (read functions and their values)
+- Write contract tab (write functions including inputs and Write buttons for their execution)
+- Contract events tab (total number of events, txn hash, method, logs)
+
+### 1.41.3. UI Design
+
+Refer to: https://ftmscan.com/address/0x0eca94713829bba13877b7c67a9cdd9873522fc0 {{className: 'break-words'}}
+
+## 1.42. Nexis Scan: View validators leaderboard
+
+### 1.42.1. Summary
+
+As a Guest I want to view validators leaderboard so that I could check the most performing validators
+
+### 1.42.2. Acceptance criteria
+
+### 1.42.2.1. A user should be able to access the Validators page from the main menu of Nexis Scan application.
+
+### 1.42.2.2. The page should include:
+
+- The list of validators (total number of validators, rank, Address, ID, downtime, self-staked amount, delegated amount, total staked, status)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.42.3. UI Design
+
+Refer to: https://ftmscan.com/validators
+
+## 1.43. Nexis Scan: View epochs
+
+### 1.43.1. Summary
+
+As a Guest I want to view epochs so that I could check the confirmed batches of blocks
+
+### 1.43.2. Acceptance criteria
+
+### 1.43.2.1. A user should be able to access the Epochs page from the main menu of Nexis Scan application.
+
+### 1.43.2.2. The page should include:
+
+- The list of epochs (total number of epochs, epoch ID, end time, total base reward, total fee, total reward)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.43.3. UI Design
+
+Refer to: https://ftmscan.com/epochs
+
+## 1.44. Nexis Scan: View epoch details
+
+### 1.44.1. Summary
+
+As a Guest I want to view epoch details so that I could check the extended information of a specific epoch
+
+### 1.44.2. Acceptance criteria
+
+### 1.44.2.1. By clicking on epoch ID from any page of Nexis Scan application a user should be able to view the Epoch page.
+
+### 1.44.2.2. The page should include:
+
+- Epoch ID
+- End time
+- Total base reward
+- Total fee
+- Total reward weight
+- Comments (view and comment)
+
+### 1.44.3. UI Design
+
+Refer to: https://ftmscan.com/epoch/40399
+
+## 1.45. Nexis Scan: View ERC-20 top tokens
+
+### 1.45.1. Summary
+
+As a Guest I want to view erc-20 top tokens so that I could check the most valuable ERC-20 tokens on chain
+
+### 1.45.2. Acceptance criteria
+
+### 1.45.2.1. A user should be able to access the Token Tracker page from the main menu of Nexis Scan application.
+
+### 1.45.2.2. The page should include:
+
+- The list of ERC-20 tokens (total number of tokens, token name and logo, token price in USD/BTC/ENZT, daily change percent, daily trading volume, market cap, number of token holders)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.45.3. UI Design
+
+Refer to: https://ftmscan.com/tokens
+
+## 1.46. Nexis Scan: View ERC-20 token transfers
+
+### 1.46.1. Summary
+
+As a Guest I want to view erc-20 token transfers so that I could check transactions of ERC-20 tokens
+
+### 1.46.2. Acceptance criteria
+
+### 1.46.2.1. A user should be able to access the Token Transfers page from the main menu of Nexis Scan application.
+
+### 1.46.2.2. The page should include:
+
+- The list of ERC-20 token transactions (total number of transactions, txn hash, age, from/to addresses, value, token name and symbol)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.46.3. UI Design
+
+Refer to: https://ftmscan.com/tokentxns
+
+## 1.47. Nexis Scan: View ERC-721 top tokens
+
+### 1.47.1. Summary
+
+As a Guest I want to view erc-721 top tokens so that I could check the most valuable ERC-721 tokens on chain
+
+### 1.47.2. Acceptance criteria
+
+### 1.47.2.1. A user should be able to access the Non-Fungible Token Tracker page from the main menu of Nexis Scan application.
+
+### 1.47.2.2. The page should include:
+
+- The list of non-fungible tokens (total number of NFT token contracts, token name and logo, daily number of transfers, weekly number of transfers)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.47.3. UI Design
+
+Refer to: https://ftmscan.com/tokens-nft
+
+## 1.48. Nexis Scan: View ERC-721 token transfers
+
+### 1.48.1. Summary
+
+As a Guest I want to view erc-721 token transfers so that I could check transactions of ERC-721 tokens
+
+### 1.48.2. Acceptance criteria
+
+### 1.48.2.1. A user should be able to access the Non-Fungible Token Transfers page from the main menu of Nexis Scan application.
+
+### 1.48.2.2. The page should include:
+
+- The list of non-fungible token transactions (total number of transactions, txn hash, age, from/to addresses, token ID, token name and symbol)
+- Pagination controls (first page, last page, next page, previous page, current page number, total number of pages, dropdown to set the number of records to show per page)
+
+### 1.48.3. UI Design
+
+Refer to: https://ftmscan.com/tokentxns-nft
+
+## 1.49. Nexis Scan: View charts and stats
+
+### 1.49.1. Summary
+
+As a Guest I want to view charts and stats so that I could get visual insights on blockchain data
+
+### 1.49.2. Acceptance criteria
+
+### 1.49.2.1. A user should be able to access the Nexis Network Charts & Statistics page from the main menu of Nexis Scan application.
+
+### 1.49.2.2. The page should include the preview images for the following charts:
+
+- Daily Transactions Chart
+- ERC-20 Daily Token Transfer Chart
+- Unique Addresses Chart
+- Average Block Size Chart
+- Average Block Time Chart
+- Average Gas Price Chart
+- Daily Gas Used Chart
+- Block Count and Rewards Chart
+- Network Pending Transactions Chart
+- Network Transaction Fee Chart
+- Network Utilization Chart
+- Verified Contracts Chart
+
+### 1.49.2.3. Upon clicking on a chart preview image the page with the selected chart is open
+
+### 1.49.2.4. A user should be able to print the chart and/or download it in various file formats (png, jpeg, pdf, svg, csv)
+
+### 1.49.3. UI Design
+
+Refer to: https://ftmscan.com/charts
+
+## 1.50. Nexis Scan: View top statistics
+
+### 1.50.1. Summary
+
+As a Guest I want to view top statistics so that I could check selected highlights from blockchain data
+
+### 1.50.2. Acceptance criteria
+
+### 1.50.2.1. A user should be able to access the Top Statistics page from the main menu of Nexis Scan application.
+
+### 1.50.2.2. The page should include:
+
+- The list of top ENZT senders (Rank, Address, Total Amount Sent, Percentage)
+- The list of top ENZT receivers (Rank, Address, Total Amount Received, Percentage)
+- Top Txn Count Sent (Rank, Address, Total Txn, Percentage)
+- Top Txn Count Received (Rank, Address, Total Txn, Percentage)
+- Top Tokens by Unique Senders (Rank, Token Name, Unique Senders)
+- Top Tokens by Unique Receivers (Rank, Token Name, Unique Receivers)
+- Top Tokens by Total Uniques (Rank, Token Name, Total Uniques)
+- Top Tokens by Txn Count (Tag Cloud, Rank, Token Name, Txn Count)
+- Top Accounts by Gas Used (Pie Chart, Rank, Address, Gas Used)
+- Top Accounts by Txn Count (Pie Chart, Rank, Address, Txn Count)
+
+### 1.50.2.3. A user should be able to switch between 24 Hours, 3 Days and 7 Days statistics period for all data sets.
+
+### 1.50.2.4. The Overview tab should include the top ranked address from each data set with the value.
+
+### 1.50.3. UI Design
+
+Refer to: https://ftmscan.com/topstat#Overview
+
+## 1.51. Nexis Scan: Developer APIs
+
+### 1.51.1. Summary
+
+As a Guest I want to developer apis so that I could get information about available API endpoints and methods
+
+### 1.51.2. Acceptance criteria
+
+### 1.51.2.1. A user should be able to access the Developers API page from the main menu of Nexis Scan application.
+
+### 1.51.2.2. The page should include the API reference for the following methods:
+
+- Get ENZT Balance for a single Address
+- Get ENZT Balance for multiple Addresses in a single call
+- Get a list of 'Normal' Transactions By Address
+- Get a list of "ERC-20 - Token Transfer Events" by Address
+- Get a list of "ERC721 - Token Transfer Events" by Address
+- Get list of Blocks Validated by Address
+- Get Contract ABI for Verified Contract Source Codes
+- Get Contract Source Code for Verified Contract Source Codes
+- Get ERC20-Token TotalSupply by ContractAddress
+- Get ERC20-Token Account Balance for TokenContractAddress
+- Get Total Supply of ENZT on the Nexis Network
+- Get Validators list on the Nexis Network
+- ENZT RPC Nodes
+
+### 1.51.3. UI Design
+
+Refer to: https://ftmscan.com/apis
+
+## 1.52. Nexis Scan: Verify contract
+
+### 1.52.1. Summary
+
+As a Guest I want to verify contract so that I could verify the contract that was deployed to the network
+
+### 1.52.2. Acceptance criteria
+
+### 1.52.2.1. After deploying the smart contract a user should be able to verify it.
+
+### 1.52.2.2. A user should be able to access the Verify & Publish Contract Source Code page from the main menu of Nexis Scan application.
+
+### 1.52.2.3. In order to verify the code of a smart contract a user should:
+
+- enter the address of the deployed smart contract
+- select compiler type from the dropdown
+- select open source license type
+- agree to the terms of service
+- enter the source code of the smart contract
+- enter the ABI encoded parameters of deployment
+
+### 1.52.2.4. The Nexis Scan application should verify the code of the smart contract and display errors if any.
+
+### 1.52.2.5. Once the contract is successfully verified the verification mark is added on the page of the smart contract.
+
+### 1.52.3. UI Design
+
+Refer to: https://ftmscan.com/verifyContract
+
+## Nexis Scan: Bytecode to Opcode Disassemble
+
+### 1.53.1. Summary
+
+As a Guest I want to bytecode to opcode disassemble so that I could decode the low level Contract ByteCodes to Opcodes
+
+### 1.53.2. Acceptance criteria
+
+### 1.53.2.1. A user should be able to disassemble the bytecode to opcode at the Bytecode to Opcode Disassembler page that should be accessible from the main menu of Nexis Scan application.
+
+### 1.53.2.2. The page should include:
+
+- Bytecode input field
+- Decode button
+
+### 1.53.2.3. If the decoding is successful, the opcode is displayed on the page. Otherwise the error message is displayed with the description of the error.
+
+### 1.53.3. UI Design
+
+Refer to: https://ftmscan.com/opcode-tool
+
+## 1.54. Nexis Scan: Broadcast Raw Transaction
+
+### 1.54.1. Summary
+
+As a Guest I want to broadcast raw transaction so that I could paste a Signed Raw Transaction in hex format and broadcast it over the Nexis Network
+
+### 1.54.2. Acceptance criteria
+
+### 1.54.2.1. A user should be able to send a transaction via Broadcast Raw Transaction page that should be accessible from the main menu of Nexis Scan application.
+
+### 1.54.2.2. The page should include:
+
+- Transaction hex input field
+- Send Transaction button
+
+### 1.54.2.3. If the sending is successful, the txn hash is displayed on the page. Otherwise the error message is displayed with the description of the error.
+
+### 1.54.3. UI Design
+
+Refer to: https://ftmscan.com/pushTx
+
+## 1.55. Nexis Scan: Registration
+
+### 1.55.1. Summary
+
+As a User I want to register an account so that I could get access to the additional functionality of Nexis Scan app
+
+### 1.55.2. Acceptance criteria
+
+### 1.55.2.1. A user should be able to create an account with Nexis Scan application.
+
+### 1.55.2.2. Registration form should be opened from the login screen by clicking the Sign Up link.
+
+### 1.55.2.3. Registration form should include:
+
+- Username input field (should be unique)
+- Email address input field (should be unique)
+- Password input field
+- Confirm Password input field (should match Password)
+- Agree to the TnC check-box
+- Opt-in for a newsletter check-box
+- Captcha widget
+- Create an Account button
+
+### 1.55.2.4. Once a user submits the registration form, the email with an activation link is sent to the registered email address.
+
+### 1.55.2.5. Once a user activates their account by clicking the activation link, they can login to their profile on Nexis Scan application.
+
+### 1.55.3. UI Design
+
+Refer to: https://ftmscan.com/register
+
+## 1.56. Nexis Scan: Authentication
+
+### 1.56.1. Summary
+
+As a User I want to pass an authentication so that I could log into my personal profile on Nexis Scan app
+
+### 1.56.2. Acceptance criteria
+
+### 1.56.2.1. A user should be able to login to their profile on Nexis Scan application by clicking on the Sign In button at the main menu.
+
+### 1.56.2.2. Login page should include:
+
+- Username input field
+- Password input field
+
+### 1.56.2.3. A user should be able to recover their password with Forgot password functionality.
+
+### 1.56.2.4. Once a user is successfully logged in, they should be able to navigate to their profile page.
+
+### 1.56.2.5. A logged in user should be able to terminate their session by clicking the Sign Out button from the main menu.
+
+### 1.56.3. UI Design
+
+Refer to: https://ftmscan.com/login
+
+## 1.57. Nexis Scan: User profile
+
+### 1.57.1. Summary
+
+As a User I want to manage user profile so that I could use features available for registered users only
+
+### 1.57.2. Acceptance criteria
+
+### 1.57.2.1. A registered and logged in user should be able to open their profile page from the main menu.
+
+### 1.57.2.2. On the profile page a user should be able to:
+
+- View and change profile details (email address, password, username, profile picture, profile bio, website link)
+- Manage watchlist (add address, set events notifications)
+- Manage transaction private notes
+- Manage address private notes
+- Manage token ignore list
+- Manage API keys
+- Manage verified addresses
+- Manage custom ABIs
+
+### 1.57.3. UI Design
+
+Refer to: https://ftmscan.com/myaccount
+
+<GuidesOther
+  id="tech_perspective"
+  title="Technical Perspective"
+  level={2}
+  isShow={false}
+/>
+
+## 1.1. Purpose
+
+The document defines the understanding of the general objectives for the creation of the project “Nexis Network - innovative blockchain platform - (hereinafter - the software product, System, Platform, “Nexis Network”). The document sets out the main requirements for the software product, defines the scope of this product, the purpose of implementation, restrictions and strategic decisions on project implementation, agreed between the Customer and the Developer. The Software Requirement Specification document is the basis for the software product development process.
+
+## 1.2. Scope
+
+This document was created and should be used within the “NexisCoin” project.
+
+All persons mentioned in this document, to some extent, participate in the project or are interested in its implementation.
+
+This document should indicate only the main functions and features of the product, and only those that have been agreed upon by all stakeholders. Functions and features that do not have the status of accepted but are only developments for the future - can not be included in this document without the appropriate designations.
+
+## 1.3. Definitions and Acronyms
+
+SRS - Software Requirements Specification - this document.
+
+UI - User Interface.
+
+AWS - Amazon Web Services cloud environment.
+
+## 1.4. Overall Description
+
+“NexisCoin” project includes two main components:
+
+### 1.4.1. A web-based application that will provide a platform for decentralized cross-chain conversion of digital assets based on 1INCH API.
+
+This application will have the similar design and functionality as the 1INCH app (https://app.1inch.io/).
+
+The process of interacting with the application could be described in the following simplified steps:
+
+- Navigate to the swap application from NexisCoin website
+- Connect wallet with Metamask or WalletConnect
+- Buy cryptocurrency via MoonPay
+- Use bridges to move coins cross-chain
+- Select the chain
+- Set the direction of exchange
+- View the details of the deal (rate, fees)
+- Set additional parameters (gas limit, slippage)
+- Confirm the deal
+
+### 1.4.2. A blockchain network based on Fantom blockchain fork that will provide an ecosystem for creating customized blockchains, deploying smart contracts, with full support of Solidity smart contracts.
+
+This solution will allow users to perform the following use cases:
+
+- Use Nexis Network official wallet
+- Use Nexis Network native coin NexisCoin
+- Connect with Metamask to the testnet and mainnet
+- Run a validator node
+- Run a read-only node
+- Stake native NexisCoin and get a reward
+- Deploy a smart contract written in Solidity
+- Create a fixed-cap asset
+- Create a variable-cap asset
+- Create a local test network
+- Explore the network for transactions and other on-chain data
+
+## 1.5. NexisSwap High-Level Solution Architecture
+
+### 1.5.1. NexisSwap FE App is a standalone React application. This application is built into several js and CSS files and is meant to be served from the s3 bucket using cloud front.
+
+### 1.5.2. NexisSwap App is integrated with 1INCH API through a secured VPN connection.
+
+### 1.5.3. A user interacts with NexisSwap App from their web browser using Metamask extension (or Wallet Connect integration) for making transactions.
+
+## 1.6. Nexis Network High-Level Solution Architecture
+
+### 1.6.1. A Validator node consists of three components: state machine, consensus and networking.
+
+### 1.6.2. An application can communicate to a node via CLI. Opera network supports auditing by permitting participants to join in post-validation mode.
+
+### 1.6.3. An observer (or Monitor) node consists of a state machine, post validation component and networking component.
+
+### 1.6.4. The network supports three types of participants: users, validators and monitors.
+
+### 1.6.5. Each validating node can create new event blocks. Generation of a new event block indicates that the new block and all of its ancestors have been validated by the creator node of that new event block.
+
+### 1.6.6. The consensus mechanism is inherited from the Fantom’s Opera Network and described in the Lachesis Whitepaper (https://arxiv.org/pdf/2108.01900.pdf)
+
+<GuidesOther id="user_stories" title="User Stories" level={2} isShow={false} />
+
+## 1. The List of User Stories
+
+<table className="w-full border-collapse border border-slate-400 bg-white text-sm shadow-sm dark:border-slate-500 dark:bg-inherit">
+  <thead>
+    <tr>
+      <th className="w-1/4 border border-slate-300 px-3 py-0 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-200">
+        No
+      </th>
+      <th className="w-1/4 border border-slate-300 px-3 py-0 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-200">
+        Epic
+      </th>
+      <th className="w-1/4 border border-slate-300 px-3 py-0 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-200">
+        Role
+      </th>
+      <th className="w-1/4 border border-slate-300 px-3 py-0 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-200">
+        Feature
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        1
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        NexisSwap
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View the main page
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        2
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        NexisSwap
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Connect a wallet
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        3
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        NexisSwap
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Buy cryptocurrency with credit card
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        4
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        NexisSwap
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Transfer coins via bridges
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        5
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        NexisSwap
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Select the chain for swap
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        6
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        NexisSwap
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Set the swap parameters
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        7
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        NexisSwap
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View the details of the deal (rate, fees, route)
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        8
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        NexisSwap
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Set additional parameters (gas limit, slippage)
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        9
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        NexisSwap
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Confirm the deal
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        10
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View the home page
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        11
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Connect Metamask
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        12
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Create a new wallet
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        13
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Restore wallet
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        14
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Edit wallet settings
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        15
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Copy wallet address
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        16
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Show QR code with wallet address
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        17
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Delete wallet
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        18
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View the history of transactions
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        19
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View the list of assets
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        20
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Send assets
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        21
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Receive assets
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        22
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Stake NexisCoin
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        23
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Wallet
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Vote on governance proposals
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        24
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Network
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Validator
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Run a validator node
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        25
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Network
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Run a read-only node
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        26
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Network
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Deploy a Solidity smart contract
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        27
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Network
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Create a fixed-cap asset
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        28
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Network
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Create a variable-cap asset
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        29
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Network
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Create a local test network
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        30
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Main page
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        31
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View top accounts by balance
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        32
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View account details
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        33
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View token holdings by account
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        34
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View the list of confirmed transactions
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        35
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View the list of pending transactions
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        36
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View transaction details
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        37
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View contract internal transactions
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        38
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View blocks
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        39
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View block details
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        40
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View verified contracts
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        41
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View contract details
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        42
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View validators leaderboard
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        43
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View epochs
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        44
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View epoch details
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        45
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View ERC-20 top tokens
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        46
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View ERC-20 token transfers
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        47
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View ERC-721 top tokens
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        48
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View ERC-721 token transfers
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        49
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View charts and stats
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        50
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        View top statistics
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        51
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Developer APIs
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        52
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Verify contract
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        53
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Bytecode to Opcode Disassemble
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        54
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Guest
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Broadcast Raw Transaction
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        55
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Register an account
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        56
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Pass an authentication
+      </td>
+    </tr>
+    <tr>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        57
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Nexis Scan
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        User
+      </td>
+      <td className="border border-slate-300 px-3 py-0 text-slate-500 dark:border-slate-700 dark:text-slate-200">
+        Manage user profile
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,325 @@
+import { HeroPattern } from '@/components/HeroPattern'
+import { GuidesOther } from '@/components/GuidesOther'
+import { ResourcesOther } from '@/components/ResourcesOther'
+
+import logoRemix from '@/images/remix.webp'
+import logoTruffle from '@/images/truffle.png'
+import logoHardhat from '@/images/hardhat.ico'
+import logoSolidity from '@/images/solidity.svg'
+import logoOpenzeppelin from '@/images/openzeppelin.svg'
+import logoNexisscan from '@/images/nexscan.png'
+import logoNexistech from '@/images/nexis_tech.png'
+
+export const sections = [
+  { title: 'What is the Nexis Network?', id: 'what' },
+  { title: 'Key Features', id: 'features' },
+  { title: 'Get Started', id: 'started' },
+]
+
+export const tools = [
+  {
+    href: 'https://remix.ethereum.org',
+    name: 'Remix',
+    description: '',
+    icon: logoRemix,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+  {
+    href: 'https://trufflesuite.com',
+    name: 'Truffle',
+    description: '',
+    icon: logoTruffle,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+  {
+    href: 'https://hardhat.org',
+    name: 'Hardhat',
+    description: '',
+    icon: logoHardhat,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+  {
+    href: 'https://docs.soliditylang.org/en/v0.8.17',
+    name: 'Solidity',
+    description: '',
+    icon: logoSolidity,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+  {
+    href: 'https://www.openzeppelin.com',
+    name: 'OpenZeppelin',
+    description: '',
+    icon: logoOpenzeppelin,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+]
+
+export const elements = [
+  {
+    href: 'https://nexscan.io',
+    name: 'Nexis Network Block Explorer - Mainnet',
+    description: '',
+    icon: logoNexisscan,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+  {
+    href: 'https://testnet.nexscan.io',
+    name: 'Nexis Network Block Explorer - Testnet',
+    description: '',
+    icon: logoNexisscan,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+  {
+    href: '',
+    name: 'Become a node validator',
+    description: '',
+    icon: logoNexisscan,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+  {
+    href: 'https://dex.nexis.network',
+    name: 'Decentralized exchange',
+    description: '',
+    icon: logoNexistech,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+  {
+    href: 'https://staking.nexis.network',
+    name: 'NZT Staking',
+    description: '',
+    icon: logoNexistech,
+    pattern: {
+      y: 16,
+      squares: [
+        [0, 1],
+        [1, 3],
+      ],
+    },
+  },
+]
+
+export const guides = [
+  {
+    href: '/industry_use_cases',
+    name: 'Industry use cases',
+    description:
+      'Learn how Nexis Network can be implemented into different industries, projects, and markets.',
+  },
+  {
+    href: '/wallets',
+    name: 'Wallets',
+    description:
+      'Learn the different wallet options that are available to users of the Nexis Network.',
+  },
+  {
+    href: '/staking',
+    name: 'Staking',
+    description:
+      'Learn how can stake by delegating your tokens to validators who process transactions and run the network.',
+  },
+  {
+    href: '/grants',
+    name: 'Grants',
+    description:
+      'Learn how can port your code from Ethereum, or develop on native chain, to deploy it.',
+  },
+  {
+    href: '/command_line',
+    name: 'Command Line',
+    description:
+      'Learn how to use the Nexis Network command-line tools to create a wallet, to send and receive NZT tokens.',
+  },
+  {
+    href: '/developing_native_nexis',
+    name: 'Developing on native Nexis',
+    description:
+      'Learn how to start developing immediately you can build, deploy, and run one of the examples.',
+  },
+  {
+    href: '/integrating',
+    name: 'Integrating',
+    description:
+      'Learn how to add Nexis Network native token NZT to your cryptocurrency exchange.',
+  },
+  {
+    href: '/validating',
+    name: 'Validating',
+    description: 'Learn how run a Nexis Network validator node.',
+  },
+  {
+    href: '/clusters',
+    name: 'Clusters',
+    description:
+      'Learn how Nexis Network maintains several different clusters with different purposes.',
+  },
+  {
+    href: '/architecture',
+    name: 'Architecture',
+    description:
+      'Learn how a cluster is created, how nodes join the cluster, and how they cope with buggy and malicious nodes.',
+  },
+  {
+    href: '/software',
+    name: 'Software',
+    description:
+      'Learn how Nexis Network project will be aimed to including full support of Ethereum based dApps.',
+  },
+  {
+    href: '/performance_reports',
+    name: 'Performance Reports',
+    description:
+      'Learn how to measure the SC ERC20 token transfers, SC ERC721 token minting and EOA to EOA.',
+  },
+]
+
+<HeroPattern />
+
+<GuidesOther id="introduction" title="Introduction" level={1} isShow={false} />
+
+Nexis Network is a lightning-fast Layer-1 blockchain enabling users and developers to build EVM compatible decentralized apps, games, DeFi protocol's, and scaling solutions. {{ className: 'lead' }}
+
+<GuidesOther
+  id="what"
+  title="What is the Nexis Network?"
+  level={2}
+  isShow={false}
+/>
+
+Nexis Network is a web3 infrastructure protocol with the mission of being the go to
+blockchain solution for enterprises, Web3 gaming, and DeFi. It provides infinite
+scalability through zkSnarks, optimistic roll-ups, side-chains, decentralized and
+automated yield generating bridges, smart contract auditing and verification systems,
+and other features. Nexis Network also has multiple target markets including Decentralized
+Finance, Enterprise Solutions, Web3 and Big Data. Its goal is to offer developers
+easy access to major scaling and infrastructure solutions while maintaining a solid
+foundation for growth and security excellence.
+
+## Nexis Network is
+
+- Cross-chain interoperable
+- Decentralized
+- Eco-friendly
+- open-source
+- Permissionless
+
+## Nexis Network is
+
+- Scale Web3 adoption and security
+- Foster participation and growth
+- Encourage application development
+- Cultivate a strong developer ecosystem
+
+<GuidesOther id="features" title="Key Features" level={2} isShow={false} />
+
+## Speed
+
+Nexis Network achieves transaction finality in ~2 seconds on average and provides real-time transactions. That aid in enhancing metaverse gaming, data processing, transaction processing, and cross-chain transactions.
+
+## Scalability
+
+Nexis Network can process thousands of transactions per seconds and can scale to hundreds of nodes with the capability of scaling to 65,000 transactions per second (TPS).
+
+## Security
+
+PoS BFT consensus provides institutional-grade security to distributed networks. Nexis Network offers absolute finality, which means that transactions can never be reverted like in networks with probabilistic finality.
+
+The Nexis Network is also leaderless. By removing leaders, security doesn’t rely on a small set of actors or node validators.
+
+## Smart Contract Support
+
+Nexis Network is fully compatible with Ethereum. Developers can create and deploy smart contracts as they would on Ethereum using custom smart contracts or their favorite open-source protocols.
+
+<ResourcesOther
+  id="tools"
+  title="Some supported tools:"
+  level={2}
+  elements={tools}
+  isHeading={true}
+/>
+
+## Securing the network
+
+A node validator must stake 10,000 NZT tokens to be able to operate as a node validator, which provides early adopters the benefit of a low barrier to entry for validating transactions and helping secure the Nexis Network as the fair launch price of Nexis (NZT) was $0.05.
+
+## Governance
+
+The NZT token will hold a utility of governance voting rights for NZT token burns throughout the years from the treasury smart contract. This is due to helping prevent inflation and keeping a stable and secure price target for securing the Nexis Network blockchain.
+Voting will consist of the following discussion topics
+
+- Grant funding for new projects (DeFi, Gaming, Security, Government compliance tools, and more).
+- Projects being listed on the Nexis Network decentralized exchange (DEX).
+- NZT token burning events.
+
+## Node Validator Incentives
+
+NZT transaction emissions are distributed as incentives for securing and scaling the network. These incentives go directly to node validators to encourage competition, and improve the health of the Nexis Network ecosystem.
+
+<GuidesOther
+  id="guides"
+  title="Guides"
+  level={2}
+  isShow={true}
+  elements={guides}
+/>
+
+<ResourcesOther
+  id="started"
+  title="Get Started"
+  level={2}
+  elements={elements}
+  isHeading={true}
+/>
